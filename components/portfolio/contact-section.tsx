@@ -48,58 +48,59 @@ export function ContactSection() {
             </div>
 
             <div className="bg-card rounded-lg p-8 md:p-12 border border-border space-y-8">
-          {/* Contact Methods */}
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-accent" />
+              {/* Contact Methods */}
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-foreground/60 text-sm font-semibold">Email</p>
+                    <a href="mailto:megagradus@gmail.com" className="text-lg font-semibold hover:text-accent transition-colors">
+                      megagradus@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-foreground/60 text-sm font-semibold">Phone</p>
+                    <a href="tel:+250786957012" className="text-lg font-semibold hover:text-accent transition-colors">
+                      +250 786 957 012
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-foreground/60 text-sm font-semibold">Location</p>
+                    <p className="text-lg font-semibold">Kigali, Rwanda</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="text-foreground/60 text-sm font-semibold">Email</p>
-                <a href="mailto:megagradus@gmail.com" className="text-lg font-semibold hover:text-accent transition-colors">
-                  megagradus@gmail.com
+
+              {/* CTA Buttons */}
+              <div className="pt-8 border-t border-border space-y-4">
+                <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
+                  <Button className="w-full text-lg py-6">
+                    Send Me an Email
+                  </Button>
                 </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <p className="text-foreground/60 text-sm font-semibold">Phone</p>
-                <a href="tel:+250786957012" className="text-lg font-semibold hover:text-accent transition-colors">
-                  +250 786 957 012
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <p className="text-foreground/60 text-sm font-semibold">Location</p>
-                <p className="text-lg font-semibold">Kigali, Rwanda</p>
-              </div>
-            </div>
-          </div>
-
-            {/* CTA Buttons */}
-            <div className="pt-8 border-t border-border space-y-4">
-              <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
-                <Button className="w-full text-lg py-6">
-                  Send Me an Email
+                <Button 
+                  variant="outline" 
+                  className="w-full text-lg py-6 border-2"
+                  onClick={handleDownloadCV}
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download My CV
                 </Button>
-              </a>
-              <Button 
-                variant="outline" 
-                className="w-full text-lg py-6 border-2"
-                onClick={handleDownloadCV}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download My CV
-              </Button>
+              </div>
             </div>
           </div>
         </div>
