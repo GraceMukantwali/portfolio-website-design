@@ -26,7 +26,6 @@ export function ContactSection() {
     <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Image */}
           <div className="hidden lg:flex justify-center">
             <div className="relative w-full max-w-sm aspect-[3/4]">
               <Image
@@ -38,7 +37,6 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* Right - Contact Info */}
           <div>
             <div className="mb-12">
               <h2 className="text-4xl sm:text-5xl font-bold mb-4">Let's Connect</h2>
@@ -48,7 +46,6 @@ export function ContactSection() {
             </div>
 
             <div className="bg-card rounded-lg p-8 md:p-12 border border-border space-y-8">
-              {/* Contact Methods */}
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
@@ -85,7 +82,6 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
               <div className="pt-8 border-t border-border space-y-4">
                 <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
                   <Button className="w-full text-lg py-6">
@@ -105,7 +101,6 @@ export function ContactSection() {
           </div>
         </div>
 
-        {/* Footer */}
         <div className="mt-12 text-center text-foreground/50 text-sm">
           <p>Built with Next.js, React, and Tailwind CSS</p>
           <p className="mt-2">© 2025 Grace Mukantwali. All rights reserved.</p>
