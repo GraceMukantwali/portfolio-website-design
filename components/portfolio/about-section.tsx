@@ -1,3 +1,5 @@
+'use client'
+
 export function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
