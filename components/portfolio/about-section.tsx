@@ -1,16 +1,20 @@
 'use client'
 
+import Image from 'next/image'
+
 export function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="space-y-8">
           <div className="space-y-2">
             <p className="text-sm font-semibold tracking-widest text-accent uppercase">About</p>
             <h2 className="text-4xl sm:text-5xl font-bold">Professional Summary</h2>
           </div>
 
-          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            {/* Text content */}
+            <div className="lg:col-span-2 space-y-6 text-lg text-foreground/80 leading-relaxed">
             <p>
               I am a motivated IT professional and Commercial Engineering graduate with strong expertise in full-stack JavaScript development and modern UI/UX design principles. With a foundation in both technical implementation and user-centered design, I deliver solutions that are not only functionally robust but also genuinely delightful to use.
             </p>
@@ -26,6 +30,19 @@ export function AboutSection() {
             <p>
               Beyond technical skills, I bring strong communication abilities, adaptability, and a problem-solving mindset to every project. I thrive in fast-paced environments and am eager to contribute my skills to organizations seeking talented developers and designers ready to make an impact.
             </p>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="hidden lg:flex flex-col gap-6">
+              <div className="relative w-full aspect-[3/4]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.06%20PM%20%282%29-n3UHUfXEB90pJ6KyIIiMnKb1yG6CKv.jpeg"
+                  alt="Grace working in tech environment"
+                  fill
+                  className="object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

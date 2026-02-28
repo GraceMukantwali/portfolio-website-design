@@ -1,18 +1,53 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail, Phone, MapPin, Download } from 'lucide-react'
+import Image from 'next/image'
 
 export function ContactSection() {
+  const handleDownloadCV = async () => {
+    try {
+      const response = await fetch('/api/download-cv')
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = 'Grace_Mukantwali_CV.txt'
+      document.body.appendChild(a)
+      a.click()
+      window.URL.revokeObjectURL(url)
+      document.body.removeChild(a)
+    } catch (error) {
+      console.error('Failed to download CV:', error)
+    }
+  }
+
   return (
     <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">Let's Connect</h2>
-        <p className="text-center text-foreground/70 text-lg mb-12">
-          I'm always interested in hearing about new opportunities and collaborations. Reach out anytime!
-        </p>
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left - Image */}
+          <div className="hidden lg:flex justify-center">
+            <div className="relative w-full max-w-sm aspect-[3/4]">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.07%20PM-wfSlYqCOm9faXqdCgBji5qNMKmPGO4.jpeg"
+                alt="Grace Mukantwali Professional"
+                fill
+                className="object-cover rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
 
-        <div className="bg-card rounded-lg p-8 md:p-12 border border-border space-y-8">
+          {/* Right - Contact Info */}
+          <div>
+            <div className="mb-12">
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">Let's Connect</h2>
+              <p className="text-foreground/70 text-lg">
+                I'm always interested in hearing about new opportunities and collaborations. Reach out anytime!
+              </p>
+            </div>
+
+            <div className="bg-card rounded-lg p-8 md:p-12 border border-border space-y-8">
           {/* Contact Methods */}
           <div className="space-y-6">
             <div className="flex items-start gap-4">
@@ -50,13 +85,22 @@ export function ContactSection() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-8 border-t border-border">
-            <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
-              <Button className="w-full text-lg py-6">
-                Send Me an Email
+            {/* CTA Buttons */}
+            <div className="pt-8 border-t border-border space-y-4">
+              <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
+                <Button className="w-full text-lg py-6">
+                  Send Me an Email
+                </Button>
+              </a>
+              <Button 
+                variant="outline" 
+                className="w-full text-lg py-6 border-2"
+                onClick={handleDownloadCV}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download My CV
               </Button>
-            </a>
+            </div>
           </div>
         </div>
 
