@@ -65,8 +65,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-foreground/60 text-sm font-semibold">Phone</p>
-                    <a href="tel:+250786957012" className="text-lg font-semibold hover:text-accent transition-colors">
-                      +250 786 957 012
+                    <a href="tel:+250786967012" className="text-lg font-semibold hover:text-accent transition-colors">
+                      +250 786 967 012
                     </a>
                   </div>
                 </div>
