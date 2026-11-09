@@ -8,7 +8,7 @@ const geist = Geist({
   display: 'swap',
 })
 
-const siteUrl = 'https://YOUR-DOMAIN.com'
+const siteUrl = 'https://gracemukantwali.vercel.app/'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
