@@ -8,19 +8,22 @@ import { CertificationsSection } from '@/components/portfolio/certifications-sec
 import { LanguagesSection } from '@/components/portfolio/languages-section'
 import { ContactSection } from '@/components/portfolio/contact-section'
 import { Navigation } from '@/components/portfolio/navigation'
+import { RevealOnScroll } from '@/components/portfolio/reveal-on-scroll'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <EducationSection />
-        <SkillsSection />
-        <CertificationsSection />
-        <LanguagesSection />
-        <ContactSection />
+        <RevealOnScroll>
+          <HeroSection />
+          <AboutSection />
+          <EducationSection />
+          <SkillsSection />
+          <CertificationsSection />
+          <LanguagesSection />
+          <ContactSection />
+        </RevealOnScroll>
       </main>
     </div>
   )

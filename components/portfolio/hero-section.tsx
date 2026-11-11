@@ -5,23 +5,6 @@ import { ArrowRight, Download } from 'lucide-react'
 import Image from 'next/image'
 
 export function HeroSection() {
-  const handleDownloadCV = async () => {
-    try {
-      const response = await fetch('/api/download-cv')
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'Grace_Mukantwali_CV.txt'
-      document.body.appendChild(a)
-      a.click()
-      window.URL.revokeObjectURL(url)
-      document.body.removeChild(a)
-    } catch (error) {
-      console.error('Failed to download CV:', error)
-    }
-  }
-
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-20">
       <div className="max-w-6xl w-full">
@@ -54,9 +37,10 @@ export function HeroSection() {
                 size="lg"
                 variant="outline"
                 className="text-base font-medium px-8 border-2"
-                onClick={handleDownloadCV}
+                disabled
+                title="Upload the original CV PDF to enable downloads"
               >
-                Download CV
+                CV PDF pending upload
                 <Download className="w-4 h-4 ml-2" />
               </Button>
             </div>

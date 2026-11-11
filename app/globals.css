@@ -4,20 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --card: #f8f8f8;
-  --card-foreground: #1a1a1a;
-  --popover: #ffffff;
-  --popover-foreground: #1a1a1a;
-  --primary: #1a1a1a;
-  --primary-foreground: #ffffff;
-  --secondary: #e5e5e5;
-  --secondary-foreground: #1a1a1a;
-  --muted: #e5e5e5;
-  --muted-foreground: #666666;
-  --accent: #0066ff;
-  --accent-foreground: #ffffff;
+  --background: #f8f7f2;
+  --foreground: #1d2923;
+  --card: #fffefa;
+  --card-foreground: #1d2923;
+  --popover: #fffefa;
+  --popover-foreground: #1d2923;
+  --primary: #1d2923;
+  --primary-foreground: #fffefa;
+  --secondary: #e8e7df;
+  --secondary-foreground: #1d2923;
+  --muted: #eeede6;
+  --muted-foreground: #626b63;
+  --accent: #a35f3f;
+  --accent-foreground: #fffefa;
   --destructive: #ff4444;
   --destructive-foreground: #ffffff;
   --border: #e5e5e5;
@@ -121,5 +121,73 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+}
+
+.portfolio-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.portfolio-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main section .bg-card,
+main section img {
+  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 450ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 300ms ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  main section .bg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 48px -24px color-mix(in srgb, var(--foreground) 24%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  }
+
+  main section img:hover {
+    transform: scale(1.025);
+  }
+
+  nav a {
+    transition: color 200ms ease, transform 200ms ease;
+  }
+
+  nav a:hover {
+    transform: translateY(-1px);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .portfolio-reveal {
+    opacity: 1;
+    transform: none;
   }
 }
