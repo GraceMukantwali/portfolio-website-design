@@ -286,7 +286,7 @@ main section h2 {
 }
 
 .portfolio-reveal :is(h1, h2, h3, h4) {
-  transition-delay: 2s;
+  transition-delay: 0s;
 }
 
 .portfolio-reveal.is-visible :is(h1, h2, h3, h4, p, li, figcaption, a, button) {
@@ -337,6 +337,23 @@ main section img {
   outline-offset: 4px;
 }
 
+.word-reveal-text .word-reveal-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.32em);
+}
+
+.word-reveal-text.is-active .word-reveal-word {
+  animation: word-reveal-in 460ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes word-reveal-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -346,6 +363,12 @@ main section img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     transition-delay: 0ms !important;
+  }
+
+  .word-reveal-text .word-reveal-word {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
   }
 
   .portfolio-reveal {

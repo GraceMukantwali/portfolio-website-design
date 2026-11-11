@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Download } from 'lucide-react'
 import Image from 'next/image'
+import { WordRevealText } from './word-reveal-text'
 
 export function HeroSection() {
   return (
@@ -16,8 +17,12 @@ export function HeroSection() {
           </p>
 
           <h1 className="hero-title text-[clamp(4rem,10vw,8.5rem)] font-semibold leading-[0.82] tracking-[-0.075em] text-balance">
-            <span className="block">Grace</span>
-            <span className="hero-title-highlight block">Mukantwali</span>
+            <WordRevealText text="Grace" className="block" />
+            <WordRevealText
+              text="Mukantwali"
+              className="hero-title-highlight block"
+              delayMs={220}
+            />
           </h1>
 
           <p className="mt-8 max-w-xl text-lg font-medium tracking-wide text-white/85 sm:text-xl">

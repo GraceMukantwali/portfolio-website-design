@@ -1,3 +1,5 @@
+import { WordRevealText } from './word-reveal-text'
+
 export function ITKnowledgeVideo() {
   return (
     <section
@@ -9,7 +11,7 @@ export function ITKnowledgeVideo() {
         <div className="space-y-6">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">IT knowledge</p>
           <h2 id="it-knowledge-heading" className="text-4xl font-bold sm:text-5xl">
-            Technology with purpose.
+            <WordRevealText text="Technology with purpose." />
           </h2>
           <p className="text-lg leading-relaxed text-foreground/80">
             A short introduction made with my photos and the skills I bring to web development and user-centered design.
@@ -34,7 +36,7 @@ export function ITKnowledgeVideo() {
           </video>
           <figcaption className="border-t border-border px-5 py-4">
             <h3 id="it-intro-video-title" className="font-semibold">
-              Grace Mukantwali · IT portfolio intro
+              <WordRevealText text="Grace Mukantwali · IT portfolio intro" />
             </h3>
             <p id="it-intro-video-description" className="mt-1 text-sm text-muted-foreground">
               Silent 16-second introduction with on-screen highlights of software development, web, UI/UX, and professional skills.

@@ -3,13 +3,14 @@
 import { Button } from '@/components/ui/button'
 import { Mail, Phone, MapPin, Download } from 'lucide-react'
 import Image from 'next/image'
+import { WordRevealText } from './word-reveal-text'
 
 export function ContactSection() {
   return (
     <section id="contact" className="scroll-mt-20 py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="hidden lg:flex justify-center">
+          <div className="flex justify-center">
             <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden rounded-lg border border-border shadow-2xl">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.07%20PM-wfSlYqCOm9faXqdCgBji5qNMKmPGO4.jpeg"
@@ -22,7 +23,9 @@ export function ContactSection() {
 
           <div>
             <div className="mb-12">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-4">Let's Connect</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+                <WordRevealText text="Let's Connect" />
+              </h2>
               <p className="text-foreground/70 text-lg">
                 I'm always interested in hearing about new opportunities and collaborations. Reach out anytime!
               </p>

@@ -1,5 +1,7 @@
 'use client'
 
+import { WordRevealText } from './word-reveal-text'
+
 export function LanguagesSection() {
   const languages = [
     {
@@ -22,7 +24,9 @@ export function LanguagesSection() {
   return (
     <section id="languages" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12">Languages</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12">
+          <WordRevealText text="Languages" />
+        </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {languages.map((lang, index) => (
@@ -30,7 +34,9 @@ export function LanguagesSection() {
               key={index}
               className="bg-background rounded-lg p-8 text-center border border-border hover:shadow-md transition-shadow"
             >
-              <h3 className="text-2xl font-bold mb-3">{lang.language}</h3>
+              <h3 className="text-2xl font-bold mb-3">
+                <WordRevealText text={lang.language} />
+              </h3>
               
               <div className="space-y-4">
                 <div className="w-24 h-24 rounded-full bg-accent/20 mx-auto flex items-center justify-center">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { WordRevealText } from './word-reveal-text'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +21,9 @@ export function Navigation() {
     <nav className="portfolio-nav sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-accent">GM</div>
+          <div className="text-2xl font-bold text-accent">
+            <WordRevealText text="GM" />
+          </div>
 
           <div className="hidden md:flex gap-8">
             {navItems.map((item) => (

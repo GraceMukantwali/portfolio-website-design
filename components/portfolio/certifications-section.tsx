@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { WordRevealText } from './word-reveal-text'
 
 export function CertificationsSection() {
   const certifications = [
@@ -25,7 +26,9 @@ export function CertificationsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="space-y-4 mb-12">
           <p className="text-sm font-semibold tracking-widest text-accent uppercase">Achievements</p>
-          <h2 className="text-4xl sm:text-5xl font-bold">Certifications & Training</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold">
+            <WordRevealText text="Certifications & Training" />
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -52,7 +55,9 @@ export function CertificationsSection() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
+                <h3 className="text-xl font-bold mb-2">
+                  <WordRevealText text={cert.title} />
+                </h3>
                 <p className="text-accent font-semibold mb-4">{cert.issuer}</p>
                 <p className="text-foreground/70 leading-relaxed">{cert.description}</p>
               </div>

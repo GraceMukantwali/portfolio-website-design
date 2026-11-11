@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { WordRevealText } from './word-reveal-text'
 
 export function AboutSection() {
   return (
@@ -9,7 +10,9 @@ export function AboutSection() {
         <div className="space-y-8">
           <div className="space-y-2">
             <p className="text-sm font-semibold tracking-widest text-accent uppercase">About</p>
-            <h2 className="text-4xl sm:text-5xl font-bold">Professional Summary</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold">
+              <WordRevealText text="Summary" />
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-3">

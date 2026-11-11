@@ -1,5 +1,7 @@
 'use client'
 
+import { WordRevealText } from './word-reveal-text'
+
 export function SkillsSection() {
   const skillCategories = [
     {
@@ -37,12 +39,16 @@ export function SkillsSection() {
   return (
     <section id="skills" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12">Technical & Professional Skills</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-12">
+          <WordRevealText text="Technical & Professional Skills" />
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
           {skillCategories.map((category, index) => (
             <div key={index}>
-              <h3 className="text-2xl font-bold mb-6">{category.category}</h3>
+              <h3 className="text-2xl font-bold mb-6">
+                <WordRevealText text={category.category} />
+              </h3>
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
