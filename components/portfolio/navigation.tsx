@@ -10,6 +10,7 @@ export function Navigation() {
     { label: 'About', href: '#about' },
     { label: 'Education', href: '#education' },
     { label: 'Skills', href: '#skills' },
+    { label: 'IT intro', href: '#it-knowledge' },
     { label: 'Certifications', href: '#certifications' },
     { label: 'Languages', href: '#languages' },
     { label: 'Contact', href: '#contact' },
