@@ -5,10 +5,10 @@ export function ITKnowledgeVideo() {
     <section
       id="it-knowledge"
       aria-labelledby="it-knowledge-heading"
-      className="scroll-mt-20 border-b border-border bg-card px-4 py-20 md:py-32 sm:px-6 lg:px-8"
+      className="scroll-mt-20 border-b border-border bg-card px-4 py-4 sm:px-6 lg:px-8"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-        <div className="space-y-6">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="space-y-4">
           <p className="text-sm font-semibold uppercase tracking-widest text-accent">IT knowledge</p>
           <h2 id="it-knowledge-heading" className="text-4xl font-bold sm:text-5xl">
             <WordRevealText text="Technology with purpose." />

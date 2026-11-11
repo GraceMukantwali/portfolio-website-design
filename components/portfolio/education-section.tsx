@@ -25,24 +25,24 @@ export function EducationSection() {
   ]
 
   return (
-    <section id="education" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background border-b border-border">
+    <section id="education" className="py-4 px-4 sm:px-6 lg:px-8 bg-background border-b border-border">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold mb-12">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-8">
           <WordRevealText text="Education" />
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-5">
           {educationItems.map((item, index) => (
             <div key={index} className="flex gap-6 md:gap-8">
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-accent mt-2"></div>
                 {index < educationItems.length - 1 && (
-                  <div className="w-1 h-24 bg-border mt-4"></div>
+                  <div className="w-1 h-16 bg-border mt-4"></div>
                 )}
               </div>
 
-              <div className="pb-8 flex-1">
-                <div className="bg-card rounded-lg p-6 border border-border hover:shadow-md transition-shadow">
+              <div className="pb-4 flex-1">
+                <div className="bg-card rounded-lg p-5 border border-border hover:shadow-md transition-shadow">
                   <h3 className="text-xl font-bold">
                     <WordRevealText text={item.degree} />
                   </h3>

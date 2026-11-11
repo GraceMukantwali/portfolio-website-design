@@ -30,7 +30,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                className="text-foreground/70 text-sm font-medium"
               >
                 {item.label}
               </a>
@@ -57,7 +57,7 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="block text-foreground/70 hover:text-foreground transition-colors text-sm font-medium"
+                className="block text-foreground/70 text-sm font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

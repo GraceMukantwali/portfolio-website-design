@@ -5,9 +5,9 @@ import { WordRevealText } from './word-reveal-text'
 
 export function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-20 py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
+    <section id="about" className="scroll-mt-20 py-4 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
       <div className="max-w-6xl mx-auto">
-        <div className="space-y-8">
+        <div className="space-y-5">
           <div className="space-y-2">
             <p className="text-sm font-semibold tracking-widest text-accent uppercase">About</p>
             <h2 className="text-4xl sm:text-5xl font-bold">
@@ -15,9 +15,9 @@ export function AboutSection() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-3">
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
             {/* Text content */}
-            <div className="order-last space-y-6 text-lg text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
+            <div className="order-last space-y-4 text-lg text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
             <p>
               I am a motivated IT professional and Commercial Engineering graduate with strong expertise in full-stack JavaScript development and modern UI/UX design principles. With a foundation in both technical implementation and user-centered design, I deliver solutions that are not only functionally robust but also genuinely delightful to use.
             </p>

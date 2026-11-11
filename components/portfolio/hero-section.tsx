@@ -8,9 +8,28 @@ import { WordRevealText } from './word-reveal-text'
 export function HeroSection() {
   return (
     <section className="hero-section relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
+      <div aria-hidden="true" className="hero-profile-background pointer-events-none absolute inset-y-0 left-0 hidden w-[58%] md:block">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.32.47%20PM-99Tx9iuKwMHxY5h3mOvNRfA31c5OgE.jpeg"
+          alt=""
+          fill
+          sizes="58vw"
+          className="object-cover"
+        />
+      </div>
       <div aria-hidden="true" className="hero-grid absolute inset-0" />
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
-        <div className="hero-portrait-wrap relative order-1 mx-auto w-full max-w-sm md:order-1 md:max-w-md">
+      <div
+        aria-hidden="true"
+        className="hero-future-marquee pointer-events-none absolute left-0 right-0 top-3 w-full overflow-hidden md:left-auto md:right-0 md:top-4 md:w-1/2"
+      >
+        <div className="hero-future-track">
+          <span>BUILD MY FUTURE</span>
+          <span>BUILD MY FUTURE</span>
+          <span>BUILD MY FUTURE</span>
+        </div>
+      </div>
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
+        <div className="hero-portrait-wrap relative order-1 mx-auto w-full max-w-sm md:order-2 md:max-w-md">
           <div className="hero-portrait-frame relative aspect-square rounded-full">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.32.47%20PM-99Tx9iuKwMHxY5h3mOvNRfA31c5OgE.jpeg"
@@ -23,7 +42,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="hero-copy order-2 md:order-2">
+        <div className="hero-copy order-2 md:order-1">
           <p className="mb-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/75">
             <span className="hero-status-dot" />
             Rwanda-based · Web & product design
