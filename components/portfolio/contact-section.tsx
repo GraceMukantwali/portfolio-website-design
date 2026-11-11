@@ -10,12 +10,12 @@ export function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="hidden lg:flex justify-center">
-            <div className="relative w-full max-w-sm aspect-[3/4]">
+            <div className="relative aspect-square w-full max-w-sm overflow-hidden rounded-full border border-border shadow-2xl">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.07%20PM-wfSlYqCOm9faXqdCgBji5qNMKmPGO4.jpeg"
                 alt="Grace Mukantwali Professional"
                 fill
-                className="object-cover rounded-lg shadow-2xl"
+                className="rounded-full object-cover"
               />
             </div>
           </div>
