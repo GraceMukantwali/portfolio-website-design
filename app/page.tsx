@@ -8,6 +8,7 @@ import { ITKnowledgeVideo } from '@/components/portfolio/it-knowledge-video'
 import { CertificationsSection } from '@/components/portfolio/certifications-section'
 import { LanguagesSection } from '@/components/portfolio/languages-section'
 import { ContactSection } from '@/components/portfolio/contact-section'
+import { FurtherReadingSection } from '@/components/portfolio/further-reading-section'
 import { Navigation } from '@/components/portfolio/navigation'
 import { RevealOnScroll } from '@/components/portfolio/reveal-on-scroll'
 
@@ -25,6 +26,7 @@ export default function Home() {
           <CertificationsSection />
           <LanguagesSection />
           <ContactSection />
+          <FurtherReadingSection />
         </RevealOnScroll>
       </main>
     </div>
