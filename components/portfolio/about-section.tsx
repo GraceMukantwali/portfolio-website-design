@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
+    <section id="about" className="scroll-mt-20 py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-card border-b border-border">
       <div className="max-w-6xl mx-auto">
         <div className="space-y-8">
           <div className="space-y-2">
@@ -12,9 +12,9 @@ export function AboutSection() {
             <h2 className="text-4xl sm:text-5xl font-bold">Professional Summary</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-3">
             {/* Text content */}
-            <div className="lg:col-span-2 space-y-6 text-lg text-foreground/80 leading-relaxed">
+            <div className="order-last space-y-6 text-lg text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
             <p>
               I am a motivated IT professional and Commercial Engineering graduate with strong expertise in full-stack JavaScript development and modern UI/UX design principles. With a foundation in both technical implementation and user-centered design, I deliver solutions that are not only functionally robust but also genuinely delightful to use.
             </p>
@@ -33,13 +33,13 @@ export function AboutSection() {
             </div>
 
             {/* Right side - Image */}
-            <div className="hidden lg:flex flex-col gap-6">
-              <div className="relative w-full aspect-[3/4]">
+            <div className="order-first mx-auto flex w-full max-w-sm flex-col gap-6 lg:order-last lg:max-w-none">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.06%20PM%20%282%29-n3UHUfXEB90pJ6KyIIiMnKb1yG6CKv.jpeg"
-                  alt="Grace working in tech environment"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.35.34%20PM%20%281%29-Tr8exOEfvyIhV7OtKQBL5Y5tcPj8pE.jpeg"
+                  alt="Grace Mukantwali in a tan shirt, photographed outdoors"
                   fill
-                  className="object-cover rounded-lg shadow-lg"
+                  className="object-cover"
                 />
               </div>
             </div>

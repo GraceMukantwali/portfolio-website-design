@@ -59,8 +59,8 @@ export function HeroSection() {
           <div className="hero-portrait-frame relative aspect-[4/5]">
             <div aria-hidden="true" className="hero-portrait-accent" />
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.06%20PM%20%281%29-YYgpRB8dapdmDtpPUOG8vKuTZ7JCqE.jpeg"
-              alt="Grace Mukantwali at a professional recognition event"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.32.47%20PM-99Tx9iuKwMHxY5h3mOvNRfA31c5OgE.jpeg"
+              alt="Grace Mukantwali in a white blazer in a tropical garden"
               fill
               className="hero-portrait object-cover"
               priority
