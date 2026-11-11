@@ -227,6 +227,32 @@ main section h2 {
   color: var(--highlight);
 }
 
+.portfolio-brand-mark,
+.hero-title {
+  font-family: 'Wide Latin', var(--font-display);
+  font-stretch: expanded;
+}
+
+.portfolio-brand-mark {
+  letter-spacing: 0.08em;
+}
+
+.hero-title {
+  letter-spacing: 0.08em;
+  animation: hero-name-sway 4.8s ease-in-out infinite;
+}
+
+@keyframes hero-name-sway {
+  0%,
+  100% {
+    transform: translateX(-0.35rem);
+  }
+
+  50% {
+    transform: translateX(0.35rem);
+  }
+}
+
 .hero-status-dot {
   width: 0.55rem;
   height: 0.55rem;
@@ -436,10 +462,6 @@ main section img {
   @media (min-width: 768px) and (max-height: 640px) {
     .hero-section {
       padding-block: 2rem;
-    }
-
-    .hero-title {
-      font-size: clamp(4rem, 7vw, 5.5rem);
     }
 
     .hero-copy > p:first-child {

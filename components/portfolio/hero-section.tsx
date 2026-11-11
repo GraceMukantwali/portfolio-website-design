@@ -49,7 +49,7 @@ export function HeroSection() {
             Rwanda-based · Web & product design
           </p>
 
-          <h1 className="hero-title text-[clamp(4rem,10vw,8.5rem)] font-semibold leading-[0.82] tracking-[-0.075em] text-balance">
+          <h1 className="hero-title text-[clamp(1.75rem,4vw,3.25rem)] font-semibold leading-[0.95] text-balance">
             <WordRevealText text="Grace" className="block" />
             <WordRevealText
               text="Mukantwali"

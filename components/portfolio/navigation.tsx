@@ -22,7 +22,7 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-col items-start leading-none">
-            <span className="text-2xl font-bold text-accent">
+            <span className="portfolio-brand-mark text-xl font-bold text-accent">
               <WordRevealText text="GM" />
             </span>
             <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.14em] text-foreground/60">
