@@ -21,8 +21,13 @@ export function Navigation() {
     <nav className="portfolio-nav sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-accent">
-            <WordRevealText text="GM" />
+          <div className="flex flex-col items-start leading-none">
+            <span className="text-2xl font-bold text-accent">
+              <WordRevealText text="GM" />
+            </span>
+            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.14em] text-foreground/60">
+              My Portfolio
+            </span>
           </div>
 
           <div className="hidden md:flex gap-8">

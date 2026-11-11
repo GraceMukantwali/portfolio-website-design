@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Download } from 'lucide-react'
+import { ContactChatDialog } from './contact-chat-dialog'
 import Image from 'next/image'
 import { WordRevealText } from './word-reveal-text'
 
@@ -65,14 +66,15 @@ export function HeroSection() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button
-              size="lg"
-              className="hero-primary-button bg-[var(--highlight)] px-7 text-base font-semibold text-[var(--highlight-foreground)] hover:brightness-105"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Let&apos;s talk
-              <ArrowRight data-icon="inline-end" />
-            </Button>
+            <ContactChatDialog>
+              <Button
+                size="lg"
+                className="hero-primary-button bg-[var(--highlight)] px-7 text-base font-semibold text-[var(--highlight-foreground)] hover:brightness-105"
+              >
+                Let&apos;s Talk
+                <ArrowRight data-icon="inline-end" />
+              </Button>
+            </ContactChatDialog>
             <Button
               asChild
               size="lg"
