@@ -34,12 +34,12 @@ export function AboutSection() {
 
             {/* Right side - Image */}
             <div className="order-first mx-auto flex w-full max-w-sm flex-col gap-6 lg:order-last lg:max-w-none">
-              <div className="relative aspect-square w-full overflow-hidden rounded-full border border-border shadow-lg">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg border border-border shadow-lg">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.35.34%20PM%20%281%29-Tr8exOEfvyIhV7OtKQBL5Y5tcPj8pE.jpeg"
                   alt="Grace Mukantwali in a tan shirt, photographed outdoors"
                   fill
-                  className="rounded-full object-cover"
+                  className="rounded-lg object-cover"
                 />
               </div>
             </div>
