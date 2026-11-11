@@ -285,6 +285,10 @@ main section h2 {
   transition-delay: 3s;
 }
 
+.portfolio-reveal :is(h1, h2, h3, h4) {
+  transition-delay: 2s;
+}
+
 .portfolio-reveal.is-visible :is(h1, h2, h3, h4, p, li, figcaption, a, button) {
   opacity: 1;
   transform: translateY(0);
