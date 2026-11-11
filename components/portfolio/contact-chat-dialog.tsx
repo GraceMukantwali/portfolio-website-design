@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, type FormEvent, type ReactNode } from 'react'
+import { useId, useState, type ReactNode } from 'react'
 import { Send } from 'lucide-react'
 import { MessageScroller as MessageScrollerPrimitive } from '@shadcn/react/message-scroller'
 import { Bubble, BubbleContent } from '@/components/ui/bubble'
@@ -33,42 +33,17 @@ import {
   MessageHeader,
 } from '@/components/ui/message'
 
-type ChatMessage = {
-  id: string
-  sender: 'grace' | 'visitor'
-  text: string
-}
-
-const initialMessages: ChatMessage[] = [
-  {
-    id: 'welcome',
-    sender: 'grace',
-    text: "Hi, I'm Grace. Tell me a little about what you're working on, and I'll get back to you by email.",
-  },
-]
-
 export function ContactChatDialog({ children }: { children: ReactNode }) {
   const messageId = useId()
   const [draft, setDraft] = useState('')
-  const [messages, setMessages] = useState(initialMessages)
   const [status, setStatus] = useState('')
+  const trimmedDraft = draft.trim()
+  const emailHref = trimmedDraft
+    ? `mailto:megagradus@gmail.com?subject=${encodeURIComponent('Portfolio inquiry for Grace Mukantwali')}&body=${encodeURIComponent(trimmedDraft)}`
+    : undefined
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
-    const message = draft.trim()
-    if (!message) return
-
-    setMessages((current) => [
-      ...current,
-      { id: crypto.randomUUID(), sender: 'visitor', text: message },
-    ])
-    setDraft('')
-    setStatus('Your email app will open with this message ready to send.')
-
-    const subject = encodeURIComponent('Portfolio inquiry for Grace Mukantwali')
-    const body = encodeURIComponent(message)
-    window.location.href = `mailto:megagradus@gmail.com?subject=${subject}&body=${body}`
+  function handleEmailClick() {
+    setStatus('Your message remains in this box. Complete delivery in your email app.')
   }
 
   return (
@@ -78,7 +53,7 @@ export function ContactChatDialog({ children }: { children: ReactNode }) {
         <DialogHeader className="border-b border-border p-5 pr-12 text-left">
           <DialogTitle className="text-xl">Message Grace</DialogTitle>
           <DialogDescription>
-            Send a note and I&apos;ll reply directly by email.
+            Open an email draft addressed to Grace, then send it from your email app so she can reply to you.
           </DialogDescription>
         </DialogHeader>
 
@@ -92,46 +67,31 @@ export function ContactChatDialog({ children }: { children: ReactNode }) {
                   aria-live="polite"
                   className="gap-4"
                 >
-                  {messages.map((item, index) => {
-                    const isGrace = item.sender === 'grace'
-
-                    return (
-                      <MessageScrollerPrimitive.Item
-                        key={item.id}
-                        scrollAnchor={index === messages.length - 1}
+                  <MessageScrollerPrimitive.Item scrollAnchor>
+                    <Message align="start" role="listitem">
+                      <MessageAvatar
+                        aria-hidden="true"
+                        className="size-8 text-xs font-semibold text-accent"
                       >
-                        <Message
-                          align={isGrace ? 'start' : 'end'}
-                          role="listitem"
-                        >
-                          {isGrace && (
-                            <MessageAvatar
-                              aria-hidden="true"
-                              className="size-8 text-xs font-semibold text-accent"
-                            >
-                              GM
-                            </MessageAvatar>
-                          )}
-                          <MessageContent className="max-w-[85%]">
-                            <MessageHeader>{isGrace ? 'Grace' : 'You'}</MessageHeader>
-                            <Bubble
-                              align={isGrace ? 'start' : 'end'}
-                              variant={isGrace ? 'secondary' : 'tinted'}
-                            >
-                              <BubbleContent>{item.text}</BubbleContent>
-                            </Bubble>
-                          </MessageContent>
-                        </Message>
-                      </MessageScrollerPrimitive.Item>
-                    )
-                  })}
+                        GM
+                      </MessageAvatar>
+                      <MessageContent className="max-w-[85%]">
+                        <MessageHeader>Grace</MessageHeader>
+                        <Bubble align="start" variant="secondary">
+                          <BubbleContent>
+                            Hi, I&apos;m Grace. Tell me a little about what you&apos;re working on, and I&apos;ll get back to you by email.
+                          </BubbleContent>
+                        </Bubble>
+                      </MessageContent>
+                    </Message>
+                  </MessageScrollerPrimitive.Item>
                 </MessageGroup>
               </MessageScrollerPrimitive.Content>
             </MessageScrollerPrimitive.Viewport>
           </MessageScrollerPrimitive.Root>
         </MessageScrollerPrimitive.Provider>
 
-        <form onSubmit={handleSubmit} className="border-t border-border p-4">
+        <div className="border-t border-border p-4">
           <FieldGroup className="gap-2">
             <Field>
               <FieldLabel htmlFor={messageId} className="sr-only">
@@ -152,28 +112,37 @@ export function ContactChatDialog({ children }: { children: ReactNode }) {
                   className="justify-between border-t border-border px-3 py-2"
                 >
                   <span className="text-xs text-muted-foreground">
-                    Opens your email app
+                    Email draft
                   </span>
-                  <InputGroupButton
-                    type="submit"
-                    size="sm"
-                    variant="default"
-                    disabled={!draft.trim()}
-                  >
-                    Send
-                    <Send data-icon="inline-end" />
-                  </InputGroupButton>
+                  {emailHref ? (
+                    <InputGroupButton size="sm" variant="default" asChild>
+                      <a href={emailHref} onClick={handleEmailClick}>
+                        Open email
+                        <Send data-icon="inline-end" />
+                      </a>
+                    </InputGroupButton>
+                  ) : (
+                    <InputGroupButton
+                      type="button"
+                      size="sm"
+                      variant="default"
+                      disabled
+                    >
+                      Open email
+                      <Send data-icon="inline-end" />
+                    </InputGroupButton>
+                  )}
                 </InputGroupAddon>
               </InputGroup>
               <FieldDescription id={`${messageId}-help`}>
-                Messages aren&apos;t sent or stored on this site until you send the email.
+                Your message stays here. Open the email draft and press Send to deliver it.
               </FieldDescription>
               <FieldDescription id={`${messageId}-status`} role="status" aria-live="polite">
                 {status}
               </FieldDescription>
             </Field>
           </FieldGroup>
-        </form>
+        </div>
       </DialogContent>
     </Dialog>
   )
