@@ -30,7 +30,7 @@ export function HeroSection() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button
               size="lg"
-              className="hero-primary-button bg-[var(--highlight)] px-7 text-base font-semibold text-[#11131d] hover:bg-[#c8f36a]"
+              className="hero-primary-button bg-[var(--highlight)] px-7 text-base font-semibold text-[var(--highlight-foreground)] hover:brightness-105"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Let&apos;s talk
@@ -50,7 +50,16 @@ export function HeroSection() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/65">
-            <span>Kigali, Rwanda</span>
+            <span className="inline-flex items-center gap-2">
+              <span className="rwanda-flag" aria-hidden="true">
+                <span className="rwanda-flag__blue">
+                  <span className="rwanda-flag__sun" />
+                </span>
+                <span className="rwanda-flag__yellow" />
+                <span className="rwanda-flag__green" />
+              </span>
+              Kigali, Rwanda
+            </span>
             <span>Available for opportunities</span>
           </div>
         </div>

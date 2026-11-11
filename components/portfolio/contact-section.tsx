@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="contact" className="scroll-mt-20 py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="hidden lg:flex justify-center">
@@ -36,7 +36,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-foreground/60 text-sm font-semibold">Email</p>
-                    <a href="mailto:megagradus@gmail.com" className="text-lg font-semibold hover:text-accent transition-colors">
+                    <a href="mailto:megagradus@gmail.com?subject=Portfolio%20inquiry%20for%20Grace%20Mukantwali" className="text-lg font-semibold hover:text-accent transition-colors">
                       megagradus@gmail.com
                     </a>
                   </div>
@@ -47,9 +47,18 @@ export function ContactSection() {
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="text-foreground/60 text-sm font-semibold">Phone</p>
+                    <p className="text-foreground/60 text-sm font-semibold">Phone & WhatsApp</p>
                     <a href="tel:+250786967012" className="text-lg font-semibold hover:text-accent transition-colors">
-                      +250 786 967 012
+                      +250786967012
+                    </a>
+                    <a
+                      href="https://wa.me/250786967012"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block text-sm font-semibold text-accent hover:underline"
+                      aria-label="Message Grace Mukantwali on WhatsApp"
+                    >
+                      Message on WhatsApp
                     </a>
                   </div>
                 </div>
@@ -66,11 +75,14 @@ export function ContactSection() {
               </div>
 
               <div className="pt-8 border-t border-border space-y-4">
-                <a href="mailto:megagradus@gmail.com" className="inline-block w-full">
-                  <Button className="w-full text-lg py-6">
+                <Button asChild className="w-full text-lg py-6">
+                  <a href="mailto:megagradus@gmail.com?subject=Portfolio%20inquiry%20for%20Grace%20Mukantwali">
                     Send Me an Email
-                  </Button>
-                </a>
+                  </a>
+                </Button>
+                <p className="text-center text-sm text-foreground/60">
+                  Opens a prefilled message in your email app.
+                </p>
                 <Button asChild variant="outline" className="w-full text-lg py-6 border-2">
                   <a href="/cv.pdf" download="Grace-Mukantwali-CV.pdf" aria-label="Download Grace Mukantwali's CV as a PDF">
                     <Download data-icon="inline-start" />

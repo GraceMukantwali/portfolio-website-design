@@ -37,7 +37,7 @@ export function ITKnowledgeVideo() {
               Grace Mukantwali · IT portfolio intro
             </h3>
             <p id="it-intro-video-description" className="mt-1 text-sm text-muted-foreground">
-              Silent 11-second introduction with on-screen highlights of web development, UI/UX, and professional skills.
+              Silent 16-second introduction with on-screen highlights of software development, web, UI/UX, and professional skills.
             </p>
           </figcaption>
         </figure>
