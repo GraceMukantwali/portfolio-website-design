@@ -17,7 +17,7 @@ export function AboutSection() {
 
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
             {/* Text content */}
-            <div className="order-last space-y-4 text-lg text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
+            <div className="order-last space-y-4 text-lg italic text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
             <p>
               I&apos;m Grace Mukantwali (GM), an IT professional and Commercial Engineering graduate based in Kigali, Rwanda. I&apos;m currently pursuing a Bachelor of Science in Information Technology at the University of Kigali.
             </p>

@@ -25,8 +25,9 @@ export function Navigation() {
             <span className="portfolio-brand-mark text-xl font-bold text-accent">
               <WordRevealText text="GM" />
             </span>
-            <span className="mt-1 text-[0.6rem] font-semibold tracking-[0.14em] text-foreground/60">
-              My Portfolio
+            <span className="mt-1 inline-flex items-center gap-1.5 text-[0.6rem] font-semibold tracking-[0.14em] text-foreground/60">
+              <span aria-hidden="true" className="font-mono text-accent">{'</>'}</span>
+              <span>My Portfolio</span>
             </span>
           </div>
 

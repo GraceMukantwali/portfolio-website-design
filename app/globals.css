@@ -304,6 +304,44 @@ main section h2 {
   border-radius: 50%;
 }
 
+.hero-portrait-frame::after {
+  position: absolute;
+  z-index: 3;
+  inset: -30%;
+  border-radius: 50%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgb(255 255 255 / 0.08) 48%,
+    rgb(255 255 255 / 0.58) 51%,
+    color-mix(in srgb, var(--highlight) 38%, transparent) 55%,
+    transparent 63%
+  );
+  content: '';
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: translateX(-80%) rotate(16deg);
+  animation: profile-surface-shine 6s ease-in-out infinite;
+}
+
+@keyframes profile-surface-shine {
+  0%,
+  14% {
+    opacity: 0;
+    transform: translateX(-80%) rotate(16deg);
+  }
+
+  26% {
+    opacity: 0.9;
+  }
+
+  52%,
+  100% {
+    opacity: 0;
+    transform: translateX(80%) rotate(16deg);
+  }
+}
+
 .hero-portrait {
   z-index: 1;
   filter: saturate(0.92);
@@ -311,7 +349,7 @@ main section h2 {
 
 .hero-photo-caption {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   inset: auto 0 0;
   padding: 1rem 1.25rem;
   background: linear-gradient(transparent, rgb(10 15 42 / 0.82));
@@ -438,6 +476,24 @@ main section img {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     transition-delay: 0ms !important;
+  }
+
+  .hero-title,
+.hero-portrait-frame::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 22% 18%, rgb(255 255 255 / 0.24), transparent 34%),
+    linear-gradient(145deg, color-mix(in srgb, var(--highlight) 18%, transparent), transparent 54%);
+  content: '';
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero-portrait-frame::after {
+    animation: none;
   }
 
   .word-reveal-text .word-reveal-word {

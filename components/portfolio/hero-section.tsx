@@ -58,10 +58,10 @@ export function HeroSection() {
             />
           </h1>
 
-          <p className="mt-8 max-w-xl text-lg font-medium tracking-wide text-white/85 sm:text-xl">
+          <p className="mt-8 max-w-xl text-base font-medium italic tracking-wide text-white/85 sm:text-lg">
             IT Professional <span className="text-white/45">/</span> UI/UX Designer
           </p>
-          <p className="mt-5 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
+          <p className="mt-5 max-w-lg text-base italic leading-7 text-white/70 sm:text-lg">
             I&apos;m Grace Mukantwali (GM), a Kigali-based IT professional and UI/UX designer. I bring ideas to life through full-stack development and thoughtful, people-first design.
           </p>
 
