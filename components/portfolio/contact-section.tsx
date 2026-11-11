@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, Download } from 'lucide-react'
+import { Mail, Phone, MapPin, Download, Github } from 'lucide-react'
 import Image from 'next/image'
 import { WordRevealText } from './word-reveal-text'
 
@@ -73,6 +73,24 @@ export function ContactSection() {
                   <div>
                     <p className="text-foreground/60 text-sm font-semibold">Location</p>
                     <p className="text-lg font-semibold">Kigali, Rwanda</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                    <Github className="w-6 h-6 text-accent" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-foreground/60 text-sm font-semibold">GitHub</p>
+                    <a
+                      href="https://github.com/GraceMukantwali"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-semibold transition-colors hover:text-accent"
+                      aria-label="Open Grace Mukantwali’s GitHub profile"
+                    >
+                      github.com/GraceMukantwali
+                    </a>
                   </div>
                 </div>
               </div>
