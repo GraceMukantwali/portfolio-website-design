@@ -62,7 +62,7 @@ export function HeroSection() {
             IT Professional <span className="text-white/45">/</span> UI/UX Designer
           </p>
           <p className="mt-5 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
-            Crafting elegant digital solutions through frontend & backend development, with a passion for intuitive user experiences and clean design.
+            I&apos;m Grace Mukantwali (GM), a Kigali-based IT professional and UI/UX designer. I bring ideas to life through full-stack development and thoughtful, people-first design.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">

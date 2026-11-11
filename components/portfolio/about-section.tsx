@@ -9,9 +9,9 @@ export function AboutSection() {
       <div className="max-w-6xl mx-auto">
         <div className="space-y-5">
           <div className="space-y-2">
-            <p className="text-sm font-semibold tracking-widest text-accent uppercase">About</p>
+            <p className="text-sm font-semibold tracking-widest text-accent uppercase">About Grace · GM</p>
             <h2 className="text-4xl sm:text-5xl font-bold">
-              <WordRevealText text="Summary" />
+              <WordRevealText text="My story" />
             </h2>
           </div>
 
@@ -19,19 +19,15 @@ export function AboutSection() {
             {/* Text content */}
             <div className="order-last space-y-4 text-lg text-foreground/80 leading-relaxed lg:order-first lg:col-span-2">
             <p>
-              I am a motivated IT professional and Commercial Engineering graduate with strong expertise in full-stack JavaScript development and modern UI/UX design principles. With a foundation in both technical implementation and user-centered design, I deliver solutions that are not only functionally robust but also genuinely delightful to use.
+              I&apos;m Grace Mukantwali (GM), an IT professional and Commercial Engineering graduate based in Kigali, Rwanda. I&apos;m currently pursuing a Bachelor of Science in Information Technology at the University of Kigali.
             </p>
 
             <p>
-              Currently pursuing my Bachelor of Science in Information Technology at the University of Kigali, I combine academic learning with hands-on experience. My background spans frontend development with HTML, CSS, and JavaScript, backend engineering with Node.js, and interface design using industry-standard tools like Figma. I'm committed to staying current with emerging technologies while maintaining a focus on solving real problems efficiently.
+              I enjoy bringing technology and design together. My work spans frontend development with HTML, CSS, and JavaScript, backend development with Node.js, and interface design in Figma. I aim to make every digital product useful, intuitive, and polished.
             </p>
 
             <p>
-              What drives me is the intersection of clean code and beautiful design—creating digital experiences that work seamlessly across all devices while maintaining an intuitive, accessible interface. I'm particularly passionate about translating complex requirements into elegant user experiences and collaborating with cross-functional teams to bring ambitious projects to life.
-            </p>
-
-            <p>
-              Beyond technical skills, I bring strong communication abilities, adaptability, and a problem-solving mindset to every project. I thrive in fast-paced environments and am eager to contribute my skills to organizations seeking talented developers and designers ready to make an impact.
+              I&apos;m motivated by practical problem-solving and thoughtful collaboration. I bring curiosity, clear communication, and adaptability to each project, and I&apos;m excited to contribute to work that makes a meaningful impact.
             </p>
             </div>
 
