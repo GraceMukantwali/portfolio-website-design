@@ -5,23 +5,6 @@ import { Mail, Phone, MapPin, Download } from 'lucide-react'
 import Image from 'next/image'
 
 export function ContactSection() {
-  const handleDownloadCV = async () => {
-    try {
-      const response = await fetch('/api/download-cv')
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = 'Grace_Mukantwali_CV.txt'
-      document.body.appendChild(a)
-      a.click()
-      window.URL.revokeObjectURL(url)
-      document.body.removeChild(a)
-    } catch (error) {
-      console.error('Failed to download CV:', error)
-    }
-  }
-
   return (
     <section id="contact" className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -88,13 +71,11 @@ export function ContactSection() {
                     Send Me an Email
                   </Button>
                 </a>
-                <Button 
-                  variant="outline" 
-                  className="w-full text-lg py-6 border-2"
-                  onClick={handleDownloadCV}
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  Download My CV
+                <Button asChild variant="outline" className="w-full text-lg py-6 border-2">
+                  <a href="/cv.pdf" download="Grace-Mukantwali-CV.pdf" aria-label="Download Grace Mukantwali's CV as a PDF">
+                    <Download data-icon="inline-start" />
+                    Download CV (PDF)
+                  </a>
                 </Button>
               </div>
             </div>

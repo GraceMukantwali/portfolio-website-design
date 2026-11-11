@@ -6,68 +6,66 @@ import Image from 'next/image'
 
 export function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-20">
-      <div className="max-w-6xl w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-balance">
-                Grace Mukantwali
-              </h1>
-              <p className="text-2xl sm:text-3xl font-light text-muted-foreground">
-                IT Professional & UI/UX Designer
-              </p>
-            </div>
+    <section className="hero-section relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
+      <div aria-hidden="true" className="hero-grid absolute inset-0" />
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="hero-copy order-1 lg:order-1">
+          <p className="mb-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/75">
+            <span className="hero-status-dot" />
+            Rwanda-based · Web & product design
+          </p>
 
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Crafting elegant digital solutions through frontend & backend development, with a passion for intuitive user experiences and clean design.
-            </p>
+          <h1 className="hero-title text-[clamp(4rem,10vw,8.5rem)] font-semibold leading-[0.82] tracking-[-0.075em] text-balance">
+            <span className="block">Grace</span>
+            <span className="hero-title-highlight block">Mukantwali</span>
+          </h1>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-8">
-              <Button
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-base font-medium px-8"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get in Touch
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base font-medium px-8 border-2"
-                disabled
-                title="Upload the original CV PDF to enable downloads"
-              >
-                CV PDF pending upload
-                <Download className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
+          <p className="mt-8 max-w-xl text-lg font-medium tracking-wide text-white/85 sm:text-xl">
+            IT Professional <span className="text-white/45">/</span> UI/UX Designer
+          </p>
+          <p className="mt-5 max-w-lg text-base leading-7 text-white/70 sm:text-lg">
+            Crafting elegant digital solutions through frontend & backend development, with a passion for intuitive user experiences and clean design.
+          </p>
 
-            <div className="pt-12 flex flex-col sm:flex-row gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                Kigali, Rwanda
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
-                Available for opportunities
-              </div>
-            </div>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Button
+              size="lg"
+              className="hero-primary-button bg-[var(--highlight)] px-7 text-base font-semibold text-[#11131d] hover:bg-[#c8f36a]"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Let&apos;s talk
+              <ArrowRight data-icon="inline-end" />
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="hero-secondary-button border-white/35 bg-transparent px-7 text-base text-white hover:bg-white/10 hover:text-white"
+            >
+              <a href="/cv.pdf" download="Grace-Mukantwali-CV.pdf" aria-label="Download Grace Mukantwali's CV as a PDF">
+                CV (PDF)
+                <Download data-icon="inline-end" />
+              </a>
+            </Button>
           </div>
 
-          {/* Right side - Image */}
-          <div className="relative h-full min-h-500px flex items-center justify-center">
-            <div className="relative w-full aspect-[3/4] max-w-sm">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.06%20PM%20%281%29-YYgpRB8dapdmDtpPUOG8vKuTZ7JCqE.jpeg"
-                alt="Grace Mukantwali Professional Portrait"
-                fill
-                className="object-cover rounded-lg shadow-2xl"
-                priority
-              />
-            </div>
+          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-sm text-white/65">
+            <span>Kigali, Rwanda</span>
+            <span>Available for opportunities</span>
+          </div>
+        </div>
+
+        <div className="hero-portrait-wrap order-2 mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
+          <div className="hero-portrait-frame relative aspect-[4/5]">
+            <div aria-hidden="true" className="hero-portrait-accent" />
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-02-28%20at%204.03.06%20PM%20%281%29-YYgpRB8dapdmDtpPUOG8vKuTZ7JCqE.jpeg"
+              alt="Grace Mukantwali at a professional recognition event"
+              fill
+              className="hero-portrait object-cover"
+              priority
+            />
+            <span className="hero-photo-caption">Grace Mukantwali · Kigali</span>
           </div>
         </div>
       </div>

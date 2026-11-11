@@ -1,8 +1,5 @@
 import { NextResponse } from 'next/server'
 
-export async function GET() {
-  return NextResponse.json(
-    { error: 'The CV PDF has not been uploaded yet.' },
-    { status: 404 },
-  )
+export function GET(request: Request) {
+  return NextResponse.redirect(new URL('/cv.pdf', request.url))
 }
