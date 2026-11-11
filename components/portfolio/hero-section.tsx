@@ -9,8 +9,21 @@ export function HeroSection() {
   return (
     <section className="hero-section relative isolate flex min-h-[calc(100svh-4rem)] items-center overflow-hidden px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-24">
       <div aria-hidden="true" className="hero-grid absolute inset-0" />
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-        <div className="hero-copy order-1 lg:order-1">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+        <div className="hero-portrait-wrap relative order-1 mx-auto w-full max-w-sm md:order-1 md:max-w-md">
+          <div className="hero-portrait-frame relative aspect-square rounded-full">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.32.47%20PM-99Tx9iuKwMHxY5h3mOvNRfA31c5OgE.jpeg"
+              alt="Grace Mukantwali in a white blazer in a tropical garden"
+              fill
+              className="hero-portrait rounded-full object-cover"
+              priority
+            />
+            <span className="hero-photo-caption">Grace Mukantwali · Kigali</span>
+          </div>
+        </div>
+
+        <div className="hero-copy order-2 md:order-2">
           <p className="mb-8 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/75">
             <span className="hero-status-dot" />
             Rwanda-based · Web & product design
@@ -66,19 +79,6 @@ export function HeroSection() {
               Kigali, Rwanda
             </span>
             <span>Available for opportunities</span>
-          </div>
-        </div>
-
-        <div className="hero-portrait-wrap relative order-2 mx-auto w-full max-w-sm lg:order-2 lg:max-w-md">
-          <div className="hero-portrait-frame relative aspect-square rounded-full">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-10%20at%204.32.47%20PM-99Tx9iuKwMHxY5h3mOvNRfA31c5OgE.jpeg"
-              alt="Grace Mukantwali in a white blazer in a tropical garden"
-              fill
-              className="hero-portrait rounded-full object-cover"
-              priority
-            />
-            <span className="hero-photo-caption">Grace Mukantwali · Kigali</span>
           </div>
         </div>
       </div>
