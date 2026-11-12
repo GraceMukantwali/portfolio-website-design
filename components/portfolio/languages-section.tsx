@@ -12,12 +12,12 @@ export function LanguagesSection() {
     {
       language: "English",
       proficiency: "Intermediate",
-      level: "75"
+      level: "65"
     },
     {
       language: "French",
       proficiency: "Basic",
-      level: "50"
+      level: "25"
     }
   ]
 

@@ -24,9 +24,9 @@ export function HeroSection() {
         className="hero-future-marquee pointer-events-none absolute left-0 right-0 top-3 w-full overflow-hidden md:left-auto md:right-0 md:top-4 md:w-1/2"
       >
         <div className="hero-future-track">
-          <span>BUILD MY FUTURE</span>
-          <span>BUILD MY FUTURE</span>
-          <span>BUILD MY FUTURE</span>
+          <span>I&apos;M ABLE TO BUILD MY FUTURE</span>
+          <span>I&apos;M ABLE TO BUILD MY FUTURE</span>
+          <span>I&apos;M ABLE TO BUILD MY FUTURE</span>
         </div>
       </div>
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">

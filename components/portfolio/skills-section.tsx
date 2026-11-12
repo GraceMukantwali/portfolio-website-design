@@ -33,6 +33,16 @@ export function SkillsSection() {
         { name: "Communication", proficiency: 90 },
         { name: "Problem Solving", proficiency: 85 }
       ]
+    },
+    {
+      category: "Additional Skills",
+      skills: [
+        { name: "Full-Stack Software Development", proficiency: null },
+        { name: "Network Configuration", proficiency: null },
+        { name: "Wireless Troubleshooting", proficiency: null },
+        { name: "IT Maintenance", proficiency: null },
+        { name: "Commercial Engineering", proficiency: null }
+      ]
     }
   ]
 
@@ -54,14 +64,18 @@ export function SkillsSection() {
                   <div key={skillIndex}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium">{skill.name}</span>
-                      <span className="text-accent text-sm">{skill.proficiency}%</span>
+                      {typeof skill.proficiency === "number" && (
+                        <span className="text-accent text-sm">{skill.proficiency}%</span>
+                      )}
                     </div>
-                    <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
-                      <div
-                        className="bg-accent h-full rounded-full transition-all duration-500"
-                        style={{ width: `${skill.proficiency}%` }}
-                      ></div>
-                    </div>
+                    {typeof skill.proficiency === "number" && (
+                      <div className="w-full bg-secondary rounded-full h-3 overflow-hidden">
+                        <div
+                          className="bg-accent h-full rounded-full transition-all duration-500"
+                          style={{ width: `${skill.proficiency}%` }}
+                        ></div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
